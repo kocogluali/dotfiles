@@ -197,3 +197,4 @@ if has("gui_vimr")
 	source ~/.config/nvim/ginit.vim
 endif
 let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=root:dbname=mysql:host=127.0.0.1:port=3306'
+
