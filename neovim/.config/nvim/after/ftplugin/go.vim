@@ -5,7 +5,7 @@
 	let path=&path . ",".$GOPATH."/src/"
 	let &path=path
 	nnoremap <buffer> <Leader>gt <esc> :GoTest<cr>
-	nnoremap <buffer> <Leader>gb :GoToggleBreakpoint<cr>
+	nnoremap <buffer> <Leader>gb :GoBuild<cr>
 	nnoremap <buffer> <Leader>gd <esc> :GoDef<cr>
 	nnoremap <buffer> <Leader>gs <esc> :call <SID>ADDCOMMENT() <cr>
 	nnoremap <buffer> <Leader>gi <esc> :execute 'GoImport' input('name:')<cr>
@@ -38,7 +38,7 @@
 	inoreabbr <buffer> _maps map[string]string{:% <Body> %:}
 	
 	function!  s:RUNGO() 
-			GoRun
+			GoRun %
 			execute "normal \<c-w>\<c-w>i"
 		endfunction	
 	function! s:ADDCOMMENT()

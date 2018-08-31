@@ -17,7 +17,6 @@ Plug 'vim-scripts/netrw.vim'
 Plug 'tpope/vim-dadbod'
 Plug 'plasticboy/vim-markdown'
 Plug 'lervag/vimtex'
-Plug 'jodosha/vim-godebug' "for neovim
 Plug 'tomtom/tcomment_vim'
 Plug 'w0rp/ale'
 Plug 'Raimondi/delimitMate'
@@ -181,6 +180,7 @@ function! LinterStatus() abort
 	\	all_errors
 	\)
 endfunction
+autocmd vimenter * :let g:b=system("pwd")
 function! LoadSession()
 	if argc()==0
 		silent! source ./Session.vim 
@@ -191,6 +191,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "registers
 let @g="\<C-w>5>"
 let @l="\<C-w>5<"
+
 nnoremap U :UndotreeToggle\|:UndotreeFocus<cr>
 au filetype javascript nnoremap \ge :!node %<cr>
 if has("gui_vimr")

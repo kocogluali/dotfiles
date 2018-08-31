@@ -1,0 +1,1 @@
+inoreabbr td: - [ ] :%<item>%:
