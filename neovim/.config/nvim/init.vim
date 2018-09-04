@@ -80,7 +80,7 @@ set nu
 set mouse=
 set rnu
 set autoindent
-set autochdir
+set noautochdir
 set backspace=2
 set splitright
 set statusline+=%#warningmsg#
